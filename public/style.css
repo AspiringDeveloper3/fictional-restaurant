@@ -47,7 +47,7 @@
   transform-origin: center;
   transform-box: fill-box;
   transform: rotateZ(40deg) translateY(30%) translateX(10%);
-  animation: spatula 2s infinite ease-in-out alternate;
+  animation: spatula 1.5s infinite ease-in-out alternate;
 }
 .none{
   display: none;
@@ -59,14 +59,14 @@
   }
 }
 #patty1 {
-  animation: patty1 2s ease-in-out infinite alternate;
+  animation: patty1 1.5s ease-in-out infinite alternate;
   transform: translate(-30%, 0);
   z-index: 1;
 }
 
 @keyframes patty1 {
   100% {
-    transform: translate(-30%, -40%);
+    transform: translate(-30%, -30%);
   }
 }
 nav {
