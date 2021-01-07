@@ -5,6 +5,70 @@
   font-weight: bold;
 }
 
+.preloader {
+  width:100%;
+  height:100%;
+  position: absolute;
+  top: 20%;
+  z-index:9999;
+  text-align: center;
+}
+.preloader h1{
+  margin :20px;
+  color: #faa53c;
+  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+
+#smoke {
+  animation: smoke 2.5s linear infinite;
+}
+
+@keyframes smoke {
+  100% {
+    position: relative;
+    z-index: -1;
+    transform: translate(0, -50%);
+  }
+}
+
+#hair {
+  animation: hair 1s ease-in-out infinite alternate;
+}
+
+@keyframes hair {
+  100% {
+    transform: translate(0, 1%) rotateZ(-2.5deg);
+  }
+}
+
+#spatula {
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: rotateZ(40deg) translateY(30%) translateX(10%);
+  animation: spatula 2s infinite ease-in-out alternate;
+}
+.none{
+  display: none;
+}
+
+@keyframes spatula {
+  100% {
+    transform: rotateZ(0deg) translateY(0) translateX(0);
+  }
+}
+#patty1 {
+  animation: patty1 2s ease-in-out infinite alternate;
+  transform: translate(-30%, 0);
+  z-index: 1;
+}
+
+@keyframes patty1 {
+  100% {
+    transform: translate(-30%, -40%);
+  }
+}
 nav {
   align-items: center;
   display: flex;
@@ -14,14 +78,15 @@ nav {
 }
 
 .logo {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   letter-spacing: 3px;
   z-index: 1;
   padding: 1rem;
   font-size: 26px;
 }
 
-.logo, .item{
+.logo,
+.item {
   color: #52c4fd;
 }
 
@@ -33,7 +98,7 @@ nav {
 }
 
 .item {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   list-style: none;
   font-size: 17px;
 }
@@ -50,37 +115,40 @@ nav {
   grid-template-rows: 450px 450px;
 }
 
-.head{
+.head {
   display: grid;
   grid-template-columns: 15fr 6fr;
   grid-template-rows: 6fr;
 }
 
-h1,h2,h3{
-  font-family: 'Montserrat',sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
   color: #0e60ad;
 }
-p{
-  font-family: 'Ubuntu', sans-serif;
+p {
+  font-family: "Ubuntu", sans-serif;
 }
 
-.bigger .bottom h1,p{
+.bigger .bottom h1,
+p {
   color: #0e60ad;
   padding-left: 20px;
 }
 
-.bottom h1{
+.bottom h1 {
   padding-top: 1rem;
   font-size: 2.6rem;
 }
 
-.bigger .top img{
+.bigger .top img {
   border-radius: 35px;
   margin: 10px;
   width: 90%;
   height: 400px;
 }
-.bottom p{
+.bottom p {
   line-height: 2rem;
   position: absolute;
   bottom: 40px;
@@ -88,16 +156,17 @@ p{
   font-weight: normal;
 }
 
-.smaller{
+.smaller {
   display: grid;
 }
 
-.relish{
-  position:absolute;
+.relish {
+  position: absolute;
   top: 20px;
 }
 
-.smaller .food1,.smaller .food2{
+.smaller .food1,
+.smaller .food2 {
   color: #0e60ad;
   margin: 10px;
   display: grid;
@@ -109,16 +178,18 @@ p{
   background-color: #faa53c;
 }
 
-.food1 img, .food2 img{
+.food1 img,
+.food2 img {
   width: 250px;
   height: 200px;
   grid-row: 1/3;
   grid-column: 1/2;
   border-radius: 35px;
-  padding: 10px 0 15px 20px ;
+  padding: 10px 0 15px 20px;
 }
 
-.food1 h1, .food2 h1{
+.food1 h1,
+.food2 h1 {
   font-size: 25px;
   position: absolute;
   right: 4.5rem;
@@ -126,23 +197,29 @@ p{
   grid-row: 2/3;
 }
 
-.food1 h3, .food2 h3{
+.food1 h3,
+.food2 h3 {
   font-size: 35px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.food-collection{
+.food-collection {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.food-collection .product1, .food-collection .product2, .food-collection .product3, .food-collection .product4, .food-collection .product5{
+.food-collection .product1,
+.food-collection .product2,
+.food-collection .product3,
+.food-collection .product4,
+.food-collection .product5 {
   background-color: #52c4fd;
   border-radius: 30px;
   margin: 10px;
+  transition: 1s;
   font-size: 1.2rem;
   align-items: center;
-  display:grid;
+  display: grid;
   position: relative;
   border-radius: 30px;
   background-color: #52c4fd;
@@ -150,16 +227,37 @@ p{
   grid-template-rows: 1fr 1fr;
 }
 
-.food-collection .food-emoji{
+.food-collection .product2:hover,
+.food-collection .product3:hover,
+.food-collection .product4:hover {
+  transform: perspective(350px) translate3d(10px, 0, 100px);
+  box-shadow: 0 4px 8px 0;
+  z-index: 1;
+  margin: 15px;
+}
+.food-collection .product1:hover {
+  transform: perspective(350px) translate3d(10px, 0, 100px);
+  box-shadow: 0 4px 8px 0;
+  z-index: 1;
+  margin-right: 60px;
+}
+.food-collection .product5:hover {
+  transform: perspective(350px) translate3d(10px, 0, 100px);
+  box-shadow: 0 4px 8px 0;
+  z-index: 1;
+  margin-right: 60px;
+}
+
+.food-collection .food-emoji {
   grid-column: 1/2;
   font-size: 3rem;
   grid-row: 1/2;
 }
-.food-collection .food{
+.food-collection .food {
   font-size: 2rem;
   grid-column: 2/3;
 }
-.food-collection .desc{
+.food-collection .desc {
   color: #0e60ad;
   grid-column: 1/3;
   grid-row: 2/3;
@@ -167,14 +265,6 @@ p{
   padding-bottom: 1rem;
 }
 
-span.sub{
+span.sub {
   font-size: xx-large;
 }
-
-
-
-
-
-
-
-
