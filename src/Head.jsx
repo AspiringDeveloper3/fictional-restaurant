@@ -18,12 +18,12 @@ const Head = () => {
             Food represents the never-ending battle of mankind against hunger
             and HungerPedia offers to end that battle. HungerPedia is dedicated
             to deliver taste with added cherry of freshness to your palate. We
-            have world-class chefs and the best ambience for you to enter the
+            have world- chefs and the best ambience for you to enter the
             heaven of eating.
             <br />
             <br />
             <br />
-            <span class="sub">Happy Hunger!</span>
+            <span className="sub">Happy Hunger!</span>
           </p>
         </div>
       </div>
