@@ -92,13 +92,23 @@
   left: 0;
   transform: translateY(100%);
   justify-content: center;
-  z-index: 1;
+  z-index: 4;
   align-items: center;
 }
 .slider .burger-click h1 {
   font-size: 20rem;
   cursor: pointer;
   transform: translateY(-10%);
+}
+
+.slider h1{
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+}
+.slider h2{
+  font-size: 2rem;
+  font-family: "Lobster", cursive;
+  letter-spacing: 1px;
 }
 
 .hide {
@@ -392,12 +402,21 @@ img {
   width: 100%;
 }
 
+.special{
+  background: -webkit-linear-gradient(rgb(7, 136, 241), rgb(6, 252, 199));
+  -webkit-background-clip: text;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  margin: 3rem;
+  font-size: 4rem;
+}
+
 #prev-btn {
   color: black;
   cursor: pointer;
   position: absolute;
   top: 50%;
-  z-index: 10;
+  z-index: 2;
   left: 5%;
   font-size: 35px;
 }
@@ -407,7 +426,7 @@ img {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  z-index: 10;
+  z-index: 2;
   right: 5%;
   font-size: 35px;
 }

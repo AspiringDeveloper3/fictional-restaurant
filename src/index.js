@@ -27,6 +27,7 @@ ReactDom.render(
       description4="lorem ipsum dolor sit amet, consectetur adipiscing elit"
       description5="lorem ipsum dolor sit amet, consectur adipiscing elit"
     />
+    <h1 className="special">Specials</h1>
     <div className="carousel-container">
       <i id="prev-btn" className="fas fa-arrow-left"></i>
       <i id="next-btn" className="fas fa-arrow-right"></i>
@@ -402,7 +403,7 @@ tl.to(".hide-text", {
 tl.to(".slider", {
   y: "0",
   duration: 2,
-  delay: 2,
+  delay: 4,
 });
 
 tl.to(
